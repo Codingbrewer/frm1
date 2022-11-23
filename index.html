@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join us!</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<body>
+    <main>
+        <section class="section-contact">
+            <div class="container" >
+                <img class="title-img" src="./imgs/title.png" alt="">
+                <h1>Bewirb dich jetzt!</h1>
+
+            <form action="./thankyou.html" method="POST">
+                <input type="hidden" name="_next" value="/thanks.html">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div id="1" class="form-group">
+                    <label for="fullname">Name und Nachname</label>
+                <input class="form-element"
+                       type="text"
+                       name="fullname"
+                       placeholder="John Doe"
+                       required>
+                    </div>
+
+                    <div id="2" class="form-group">
+                        <label for="address">Strasse und Hausnummer</label>
+                    <input class="form-element"
+                           type="text"
+                           name="address"
+                           placeholder="Berliner Str. 1"
+                           required>
+                        </div>
+                        
+                        <div id="3" class="form-group">
+                        <label for="zipcode">Postleitzahl</label>
+                        <input class="form-element"
+                               type="text"
+                               inputmode="numeric"
+                               pattern="[0-9]*"
+                               required 
+                               placeholder="12345">
+                            </div>
+
+                            <div id="4" class="form-group">
+                                <label for="city">Ort</label>
+                            <input class="form-element"
+                                   type="text"
+                                   name="city"
+                                   placeholder="z.b Berlin"
+                                   required>
+                                </div>
+
+                             <div id="5" class="form-group">
+                                    <label for="tel">Telefonnummer</label>
+                                <input class="form-element"
+                                       type="tel"
+                                       name="tel"
+                                       placeholder="+49 76543210"
+                                       required>
+                                    </div>
+
+               
+                                    <div id="6" class="form-group">
+                                        <label for="time">Ich bin erreichbar</label>
+                                        <select class="form-element" id="time">
+                                           
+                                            <option  value="0912" selected>09:00-12:00</option>
+                                            <option  value="1215">12:00-15:00</option>
+                                            <option  value="1518">15:00-18:00</option>
+                                            <option  value="1821" >18:00-21:00</option>
+                                      
+                                        
+                                          </select>
+                                        </div>
+                            
+                                        <div id="7" class="form-group">
+                                            <label for="salary">Gehaltwunsch</label>
+                                        <input class="form-element"
+                                               type="number"
+                                               name="salary"
+                                               placeholder="in Euro"
+                                               min="10000" max="100000"
+                                               required>
+                                            </div>
+                                            
+                                            <div id="8" class="form-group">
+                                                <label for="salary">Frühestmöglicher Eintrittstermin</label>
+                                            <input class="form-element"
+                                                   type="date"
+                                                   id="beginn"
+                                                   name="beginn"
+                                                   value="2022-12-01"
+                                                   min="2022-12-01"
+                                                   max="2023-02-01"
+                                                   required>
+                                                </div>
+
+
+                    <div id="9" class="form-group">
+                       <label for="email">E-Mail adresse</label>
+                      <input class="form-element"
+                       type="email"
+                       name="email"
+                       placeholder="john.doe@email.com"
+                       required>
+                    </div>
+
+                     <div class="g-recaptcha" data-sitekey="6LdvPCsjAAAAAF8o4ot2EtmlLieNvrwhaBpLHxY1"></div>
+
+                     <div id="10" class="form-group">
+                        <div class="drop-zone">
+                            <span class="drop-zone__prompt">Füge deine Unterlagen ein</span>
+                            <input type="file" name="myFile" class="drop-zone__input">
+                        </div>
+                    </div>
+                     
+
+                    <div class="submit-group">
+                        <input type="submit" value="Senden">
+                    </div>
+
+           </form>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="./main.js"> </script>
+
+</body>
+</html>
